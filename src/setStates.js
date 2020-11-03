@@ -1,26 +1,26 @@
-console.log('function of set states');
 var map = $('map')[0];
-// console.log( 'map: ', map )
 
-function showLaws(stateName) {
+function showStateLaws(stateName) {
     var infoDiv = $('#info');
     infoDiv.empty();
 
-    // get all laws that contains the selected state
-    var stateLaws = laws.filter(function (law) {
-        if (law.states.includes(stateName)) return law;
+    var stateLaws = statesLaws.find(function (state) {
+        if (state.stateName === stateName) return state;
     });
 
-    stateLaws.forEach(function (law) {
-        infoDiv.append('<h1>' + law.name + '</h1>');
+    // if state has no laws exit the function
+    if (stateLaws.length < 0) return;
+
+    infoDiv.append(
+        '<h2>Leyes restrictivas del estado de ' + stateName + '</h2>'
+    );
+    stateLaws.laws.forEach(function (law) {
+        infoDiv.append('<h4>Artículo ' + law.article + '</h4>');
         infoDiv.append('<p>' + law.content + '</p>');
     });
-
-    console.log(stateLaws);
 }
 
-console.log('states on set states: ', states);
-states.forEach(function (state) {
+statesCoords.forEach(function (state) {
     // create and set area
     var area = document.createElement('area');
     area.setAttribute('shape', 'poly');
@@ -31,8 +31,13 @@ states.forEach(function (state) {
     // set click event on area
     area.addEventListener('click', function (event) {
         event.preventDefault();
-        console.log('on select ', state.name);
-        showLaws(state.name);
+
+        $('select')[0].value = 'default';
+        $('img').mapster({ singleSelect: true });
+        $('img').mapster('resize', 1200, 840);
+        $(area).mapster('select');
+
+        showStateLaws(state.name);
     });
 
     map.append(area);

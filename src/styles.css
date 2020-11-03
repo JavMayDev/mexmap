@@ -1,4 +1,4 @@
-#scrollableMap {
-    overflow: scroll;
-    max-height: 80vh;
+p {
+    text-align: justify;
+    margin: 20px;
 }
