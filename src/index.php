@@ -24,6 +24,7 @@ Los delitos contra el honor, como la “Calumnia”, tienen un efecto inhibidor 
     <option value="Injuria">Injuria</option>
     <option value="Halconeo">Halconeo</option>
     <option value="Ultrajes">Ultrajes</option>
+    <option value="Antimemes">Antimemes</option>
 </select>
 
 <div id="info" class="container"> </div>
@@ -31,7 +32,7 @@ Los delitos contra el honor, como la “Calumnia”, tienen un efecto inhibidor 
 <h5>Haz click en un estado para ver sus leyes restrictivas</h5>
 <div id="maparea" >
     <div id="scrollableMap"style="max-width: 100vw; overflow-x: scroll;">
-	<img  src="<?= $source_url;?>/mexico.jpg" 
+	<img style="width: 1020; height: 714;"  src="<?= $source_url;?>/mexico.jpg" 
 	    id="mapimg" 
 	    usemap="#map" alt=""
 	    onclick="getCoords(event)" 

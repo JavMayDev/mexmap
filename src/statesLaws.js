@@ -292,6 +292,17 @@ Se impondrán de tres a quince años de prisión y multa de hasta cuatrocientos 
 		`,
                 type: 'Halconeo',
             },
+            {
+                article: null,
+                content: `
+En 2018 el Congreso de Veracruz presento la iniciativa para tipificar el acoso cibernético, a través de una reforma al Código Penal, que pretendía criminalizar cualquier medio de comunicación digital, difunda información lesiva o dolosa de otra persona, revelando, cediendo o transmitiendo una o más imágenes, grabaciones audiovisuales o textos, que dañen su reputación o su autoestima y le causen con ello afectación psicológica, familiar, laboral o en su entorno cotidiano, contemplando supuestos como:
+
+-Dar de alta, con foto incluida, a la víctima en un web donde se trata de votar, por ejemplo, a la persona más fea, a la menos inteligente y cargarle de puntos o votos para que aparezca en los primeros lugares.
+
+-Poner en Internet una imagen comprometedora (reales o efectuadas mediante fotomontajes) datos delicados, cosas que pueden perjudicar o avergonzar a la víctima y darlas a conocer en su entorno de relaciones.
+		`,
+                type: 'Antimemes',
+            },
         ],
     },
 ];

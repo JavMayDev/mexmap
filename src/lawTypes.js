@@ -40,4 +40,10 @@ Delito tipificado en 23 entidades de 32 existentes en México. La conducta que p
 Si bien los códigos penales no definen la palabra ultraje, algunas entidades lo tipifican como cualquier delito proferido contra un servidor público en ejercicio de sus funciones, mientras que otros no definen el supuesto y solo determinan la sanción, lo cual abre un abanico de posibilidades de encuadrar una conducta en ese supuesto.
 	`,
     },
+    {
+        name: 'Antimemes',
+        description: `
+Se refieren a normas penales que criminalizan falsificación o alteración de documento o similar tecnológico. La redacción del tipo penal es ambigua, puesto que permite que la publicación de contenidos modificados del original para emitir determinada expresión o mensaje, se considere un acto penalmente sancionable. Resulta más preocupante saber que la sanción de estas conductas es sancionable hasta con seis años de prisión, tal como establece el Código Penal de Guerrero.
+	`,
+    },
 ];

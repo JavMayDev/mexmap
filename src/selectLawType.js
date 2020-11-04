@@ -2,6 +2,7 @@ var map = $('map')[0];
 // console.log( $('map')[0].children )
 
 function selectLawType(lawType) {
+    console.log('lawType on select:', lawType);
     var infoDiv = $('#info');
     infoDiv.empty();
 
@@ -15,20 +16,22 @@ function selectLawType(lawType) {
     );
 
     // disable single select
-    $('img').mapster({ singleSelect: false });
-    $('img').mapster('resize', 1200, 840);
+    $('#mapimg').mapster('set_options', {
+        singleSelect: false,
+    });
 
-    statesLaws
-        .forEach(function (state) {
-            // if state has that law type
-            if (
-                state.laws
-                    .map(function (law) {
-                        return law.type;
-                    })
-                    .includes(lawType)
-            )
-                // select area
-                $('#' + state.stateName).mapster('select');
-        });
+    statesLaws.forEach(function (state) {
+        // if state has that law type
+        if (
+            state.laws
+                .map(function (law) {
+                    return law.type;
+                })
+                .includes(lawType)
+        )
+            // select area
+            $('#' + state.stateName).mapster('select');
+        // deselect area
+        else $('#' + state.stateName).mapster('deselect');
+    });
 }
